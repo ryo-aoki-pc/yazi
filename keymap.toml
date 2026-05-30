@@ -35,11 +35,11 @@ keymap = [
 	{ on = "<PageDown>",   run = "arrow 100%",  desc = "Move cursor down one page" },
 
 	# Navigation
-	{ on = "h", run = "leave", desc = "Back to the parent directory" },
-	{ on = "l", run = "enter", desc = "Enter the child directory" },
+	{ on = "h", run = "leave",              desc = "Back to the parent directory" },
+	{ on = "l", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 
-	{ on = "<Left>",  run = "leave", desc = "Back to the parent directory" },
-	{ on = "<Right>", run = "enter", desc = "Enter the child directory" },
+	{ on = "<Left>",  run = "leave",              desc = "Back to the parent directory" },
+	{ on = "<Right>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 
 	{ on = "H", run = "back",    desc = "Back to previous directory" },
 	{ on = "L", run = "forward", desc = "Forward to next directory" },
@@ -63,7 +63,7 @@ keymap = [
 	# Operation
 	{ on = "o",         run = "open",                        desc = "Open selected files" },
 	{ on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
-	{ on = "<Enter>",   run = "open",                        desc = "Open selected files" },
+	{ on = "<Enter>",   run = "plugin smart-enter",          desc = "Enter the child directory, or open files" },
 	{ on = "<S-Enter>", run = "open --interactive",          desc = "Open selected files interactively" },
 	{ on = "y",         run = "yank",                        desc = "Yank selected files (copy)" },
 	{ on = "x",         run = "yank --cut",                  desc = "Yank selected files (cut)" },
@@ -135,6 +135,8 @@ keymap = [
 	{ on = [ "g", "t" ],       run = "plugin trash",     desc = "Go to trash bin" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
+	{ on = [ "g", "/" ],       run = "cd /",             desc = "Go to / (root)" },
+	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to /tmp" },
 
 	# Tabs
 	{ on = [ "t", "t" ], run = "tab_create --current",     desc = "Create a new tab in CWD" },
