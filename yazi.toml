@@ -11,8 +11,8 @@ sort_reverse 	 = false
 sort_dir_first = true
 sort_translit  = false
 sort_fallback  = "alphabetical"
-linemode       = "none"
-show_hidden    = false
+linemode       = "size_and_mtime"
+show_hidden    = true
 show_symlink   = true
 scrolloff      = 5
 mouse_events   = [ "click", "scroll", "drag" ]
@@ -31,10 +31,13 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ run = "${EDITOR:-vi} %s", desc = "$EDITOR",      for = "unix", block = true },
-	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
-	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
+	{ run = "nvim %s", desc = "nvim",      for = "unix", block = true },
+	{ run = "nvim %s",       desc = "code (block)", for = "windows", block = true },
+	{ run = "neovide %s",    desc = "code",         for = "windows", orphan = true },
 ]
+# edit = [
+# 	{ run = 'nvim %*', block = true,  desc = "code (block)",   for = "windows" },
+# ]
 play = [
 	{ run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true },
 	{ run = "open %s",         desc = "Play", for = "macos" },
