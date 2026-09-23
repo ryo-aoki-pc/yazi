@@ -1,4 +1,4 @@
-# yazi-config
+# yazi
 
 [yazi](https://github.com/sxyazi/yazi)(ターミナルファイルマネージャ)の個人設定です。
 
