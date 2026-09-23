@@ -136,7 +136,7 @@ keymap = [
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 	{ on = [ "g", "/" ],       run = "cd /",             desc = "Go to / (root)" },
-	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to /tmp" },
+	{ on = [ "g", "T" ],       run = "cd /tmp",          desc = "Go to /tmp" },
 
 	# Tabs
 	{ on = [ "t", "t" ], run = "tab_create --current",     desc = "Create a new tab in CWD" },
