@@ -1,6 +1,6 @@
 # yazi 検証記録
 
-[導入・更新手順](../../README.md)
+[文書一覧](../README.md) / [設定の導入](../setup.md) / [設定の保守](../maintenance.md)
 
 ## 新規 AlmaLinux VM での検証 (2026-10-06)
 

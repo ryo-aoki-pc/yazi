@@ -1,6 +1,6 @@
 # yazi 設定リファレンス
 
-[導入・更新手順](../../README.md) / [検証記録](../verification/readme.md)
+[文書一覧](../README.md) / [設定の導入](../setup.md) / [設定の保守](../maintenance.md) / [検証記録](../verification/readme.md)
 
 ## 構成
 
@@ -12,25 +12,7 @@
 | `vfs.toml` | 仮想ファイルシステム定義(ゴミ箱など)。上流既定のまま。 |
 | `init.lua` | カスタム行表示モード `size_and_mtime`(サイズ + 更新日時)を定義。 |
 | `plugins/smart-enter.yazi/` | `l` / `<Enter>` で「ディレクトリなら移動・ファイルなら開く」プラグイン(同梱)。 |
-| `scripts/update-upstream.sh` | 上流の既定設定を取得して `main` ブランチに積むスクリプト([上流との差分管理](#上流との差分管理))。 |
-
-## 上流との差分管理
-
-4 つの `*.toml` は、上流リポジトリの既定設定 [`yazi-config/preset/`](https://github.com/sxyazi/yazi/tree/main/yazi-config/preset) を丸ごと置いたうえで、変更したい箇所だけ編集しています。どこを変えたかが分かるように、ブランチを 2 本に分けています。
-
-| ブランチ | 内容 |
-| --- | --- |
-| `main` | 上流の既定設定そのもの。ファイル名だけこのリポジトリ用に変えてある(下表)。**手で編集しない。作業ツリーで checkout もしない。** |
-| `custom` | 実際に使う設定(GitHub の既定ブランチ)。`main` の上に自分の変更を rebase で載せている。 |
-
-| `main` のファイル | 上流の `yazi-config/preset/` |
-| --- | --- |
-| `yazi.toml` | `yazi-default.toml` |
-| `keymap.toml` | `keymap-default.toml` |
-| `theme.toml` | `theme-dark.toml` |
-| `vfs.toml` | `vfs-default.toml` |
-
-`main` の各コミットには上流の版のタグ `upstream/vX.Y.Z` を付けています。現在追跡している版は **v26.9.1** です。
+| `scripts/update-upstream.sh` | 上流の既定設定を取得して `main` ブランチに積むスクリプト([上流との差分管理](../maintenance.md#上流との差分管理))。 |
 
 ## 独自キーバインド(抜粋)
 
