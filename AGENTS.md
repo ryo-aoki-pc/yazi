@@ -2,6 +2,8 @@
 
 このリポジトリで作業するコーディングエージェント（Claude Code・Codex・Grok Build）への指示。Claude Code は CLAUDE.md の `@AGENTS.md` で、Codex と Grok Build はこのファイルを直接読む。
 
+利用者への回答・質問・報告は、常に日本語で書く（コードのコメントなどの言語は、このファイルのほかの決まりに従う）。
+
 ## このリポジトリは何か
 
 [yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。使い方は [README.md](README.md)、構成と独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [docs/verification/readme.md](docs/verification/readme.md)。
