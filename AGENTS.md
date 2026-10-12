@@ -4,6 +4,15 @@
 
 利用者への回答・質問・報告は、常に日本語で書く（コードのコメントなどの言語は、このファイルのほかの決まりに従う）。
 
+## 導入手順の正本
+
+Windows 11・AlmaLinux 10 の導入・利用・更新・任意操作は、setup-notes の [windows-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md) と [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md) に集約する。既存の手順も対象とする。
+
+- 固有の仕様・他 OS の手順・開発者検査・理由・注意・検証記録・ロールバックが残る文書は保持する
+- 案内だけになった旧文書は削除する。README から上の2冊と[集約対応表](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/dev/consolidation-map.md)へ案内する
+
+文書規則は、Windows・AlmaLinux の実行手順には上の正本へ適用する。操作や移動先を変えたら正本・README・集約対応表・参照情報を同期し、過去の検証本文は保持する。共通 bash 設定が読むツールの初期化を `~/.bashrc` に直接追記しない。
+
 ## このリポジトリは何か
 
 [yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。使い方は [README.md](README.md)、構成と独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [docs/verification/readme.md](docs/verification/readme.md)。
@@ -41,7 +50,7 @@ bash -n scripts/update-upstream.sh
 
 ## 書き方の規則
 
-- 操作は README、構成と理由は `docs/reference/readme.md`、実施日・環境・結果は `docs/verification/readme.md` に分ける
+- Windows・AlmaLinux の操作は setup-notes の2冊、構成と理由は `docs/reference/readme.md`、実施日・環境・結果は `docs/verification/readme.md` に分ける
 - 検証していないことを「動く」と書かない。検証記録の過去の節は書き換えず、新しい節を足す
 
 ## 共同作業の規則
