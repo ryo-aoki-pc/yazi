@@ -35,7 +35,7 @@ git clone -b custom https://github.com/ryo-aoki-pc/yazi.git ~/.config/yazi
 
 ## 補足: 複数ファイルをまとめて開く
 
-[AlmaLinux 10](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-で複数ファイルをまとめて開く任意) / [Windows 11](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-で複数ファイルをまとめて開く任意)
+[AlmaLinux 10](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-で複数ファイルをまとめて開く) / [Windows 11](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-で複数ファイルをまとめて開く)
 
 ## 上流との差分を確認する
 
