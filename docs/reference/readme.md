@@ -1,6 +1,6 @@
 # yazi 設定リファレンス
 
-[導入・更新手順](../../README.md) / [検証記録](../verification/readme.md)
+[README(導入の表と、上流への追従)](../../README.md) / [検証記録](../verification/readme.md)
 
 ## 構成
 
