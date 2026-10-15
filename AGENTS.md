@@ -6,35 +6,19 @@
 
 ## 導入手順の正本
 
-Windows 11・AlmaLinux 10 の導入・利用・更新・任意操作は、setup-notes の [windows-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md) と [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md) に集約する。既存の手順も対象とする。
-
-- 固有の仕様・他 OS の手順・開発者検査・理由・注意・検証記録・ロールバックが残る文書は保持する
-- 案内だけになった旧文書は削除する。README から上の2冊と[集約対応表](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/dev/consolidation-map.md)へ案内する
-
-文書規則は、Windows・AlmaLinux の実行手順には上の正本へ適用する。操作や移動先を変えたら正本・README・集約対応表・参照情報を同期し、過去の検証本文は保持する。共通 bash 設定が読むツールの初期化を `~/.bashrc` に直接追記しない。
+導入・更新・使い方の手順は、setup-notes の [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi) と [windows-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi) の「yazi」とその子の項にある。このリポジトリには置かない。上流の新しい版への追従(設定の更新)と、macOS の導入は README に置く。
 
 ## このリポジトリは何か
 
-[yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。使い方は [README.md](README.md)、構成と独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [docs/verification/readme.md](docs/verification/readme.md)。
+[yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。導入の表と上流への追従は [README.md](README.md)、構成・ブランチ・独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [docs/verification/readme.md](docs/verification/readme.md)。
 
 ドキュメント・コミットメッセージ・Pull Request の説明は日本語で書く。
 
-### ブランチ構成
+### ブランチ構成と構成
 
-| ブランチ | 内容 |
-| --- | --- |
-| `custom` | 実際に使う設定（既定のブランチ）。`main` の上に自分の変更を rebase で載せている。作業はここから始める |
-| `main` | 上流の既定の設定（`yazi-config/preset/`）そのもの。手で編集しない。作業ツリーで checkout もしない |
-
+- `custom` が実際に使う設定(既定のブランチ。作業はここから始める)、`main` が上流の既定の設定そのもの(手で編集しない。作業ツリーで checkout もしない)
 - 4 つの `*.toml` は、上流の既定の設定を丸ごと置いたうえで、変えたい箇所だけを編集する。自分の変更は `git diff main custom -- '*.toml'` で見る
-- 上流の新しい版への追従は、`bash scripts/update-upstream.sh` で `main` にコミットを積み、`git rebase main custom` で載せ替える（README の「上流の新しい版に追従する」）
-
-## 構成
-
-- `yazi.toml`・`keymap.toml`・`theme.toml`・`vfs.toml` — 設定（上流のファイル名との対応は `docs/reference/readme.md`）
-- `init.lua` — 行表示モード `size_and_mtime`
-- `plugins/smart-enter.yazi/` — `l` / `<Enter>` で、ディレクトリなら移動・ファイルなら開くプラグイン
-- `scripts/update-upstream.sh` — 上流の既定の設定を取得して `main` に積む（作業ツリーと index には触れない）
+- ファイルの役割と、上流のファイル名との対応は `docs/reference/readme.md` の「構成」「上流との差分管理」。上流への追従は README の「上流の新しい版に追従する」
 
 ## 確かめ方
 
@@ -48,9 +32,12 @@ bash -n scripts/update-upstream.sh
 - TOML の構文は、Python 3.11 以上の `tomllib` で確かめる
 - キーの動きは、設定を一時ディレクトリにコピーし、`YAZI_CONFIG_HOME` にそこを入れて yazi を起動して確かめる。起動時に `Failed to parse config` が出ないこと
 
-## 書き方の規則
+## 文書の置き場所
 
-- Windows・AlmaLinux の操作は setup-notes の2冊、構成と理由は `docs/reference/readme.md`、実施日・環境・結果は `docs/verification/readme.md` に分ける
+- 導入・利用・更新の手順は正本に置き、README の「導入」の表から正本の項へ直接リンクする(手順書の先頭やカテゴリの見出しへはリンクしない)。執筆規則は setup-notes の `docs/dev/writing-rules.md`
+- `docs/reference/` は構成と理由、`docs/verification/` は検証記録(実施日・環境・結果・未確認事項)。ロールバックは正本の extra にある(このリポジトリには置かない)
+- setup-notes から張られている README の見出し(「依存コマンド」「上流の新しい版に追従する」)は、名前を変えない
+- 案内だけになった文書・節は消し、旧パスと移動先を setup-notes の集約対応表に足す。消すときは参照元のリンクを付け替える(検証記録は、削除前の固定コミットの URL にする)
 - 検証していないことを「動く」と書かない。検証記録の過去の節は書き換えず、新しい節を足す
 
 ## 共同作業の規則
