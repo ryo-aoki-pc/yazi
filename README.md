@@ -70,4 +70,3 @@ git push origin main && git push --force-with-lease origin custom && git push or
 - [構成・上流との差分管理・独自キーバインド](docs/reference/readme.md)
 - [検証記録](docs/verification/readme.md)
 - 確かめ方と、変更するときの決まりは [AGENTS.md](AGENTS.md)
-- 旧手順書の移動先: setup-notes の[集約対応表](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/dev/consolidation-map.md)
