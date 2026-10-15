@@ -9,12 +9,13 @@
 
 | | AlmaLinux 10 | Windows 11 |
 | --- | --- | --- |
-| 本体と依存コマンド | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi) | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi)(`YAZI_FILE_ONE` もここで設定する) |
-| この設定 | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-の設定を導入する) | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-の設定を導入する) |
+| 本体・依存コマンドとこの設定 | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi)(手順 3 で「yazi の設定を導入する」も通す) | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi)(`YAZI_FILE_ONE` もここで設定する。手順 6 で「yazi の設定を導入する」も通す) |
+| この設定だけ(本体が入っているとき) | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-の設定を導入する) | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-の設定を導入する) |
 | 複数ファイルをまとめて開く(任意) | [yazi で複数ファイルをまとめて開く](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-で複数ファイルをまとめて開く) | [yazi で複数ファイルをまとめて開く](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-で複数ファイルをまとめて開く) |
-| 本体の更新 | [共通の bash 設定・Homebrew・Flatpak を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#共通の-bash-設定homebrewflatpak-を上げる) | [scoop・winget・WSL を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#scoopwingetwsl-を上げる) |
-| この設定の更新 | [上流の新しい版に追従する](#上流の新しい版に追従する) | 同じ |
-| 戻す | [端末とエディタを消す](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/extra/almalinux-setup.md#端末とエディタを消す)の手順 1 | [エディタとシェルのツールを消す](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/extra/windows-setup.md#エディタとシェルのツールを消す)の手順 1〜3 |
+| 本体の更新 | [共通の bash 設定・Homebrew・Flatpak を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#共通の-bash-設定homebrewflatpak-を上げる)の手順 2・3 | [scoop・winget・WSL を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#scoopwingetwsl-を上げる)の手順 2・3 |
+| 戻す | [端末とエディタを消す](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/extra/almalinux-setup.md#端末とエディタを消す)の手順 1 (この設定の clone の消し方は、その箇条書き) | [エディタとシェルのツールを消す](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/extra/windows-setup.md#エディタとシェルのツールを消す)の手順 1〜3 |
+
+yazi の版が上がったら、リポジトリの所有者が[上流の新しい版に追従する](#上流の新しい版に追従する)で、この設定を新しい既定設定の上に載せ替えます(`custom` を force push する)。ほかのマシンの clone をそれに合わせる手順は、まだありません。
 
 macOS(手順と検証は無い)は、次で設定を置きます。
 
