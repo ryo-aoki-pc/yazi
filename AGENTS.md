@@ -10,7 +10,7 @@
 
 ## このリポジトリは何か
 
-[yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。導入の表と上流への追従は [README.md](README.md)、構成・ブランチ・独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [docs/verification/readme.md](docs/verification/readme.md)。
+[yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。導入の表と上流への追従は [README.md](README.md)、構成・ブランチ・独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [非公開側の readme.md](https://github.com/ryo-aoki-pc/setup-notes-verification/blob/main/repos/yazi/docs/verification/readme.md)。
 
 ドキュメント・コミットメッセージ・Pull Request の説明は日本語で書く。
 
@@ -35,9 +35,10 @@ bash -n scripts/update-upstream.sh
 ## 文書の置き場所
 
 - 導入・利用・更新の手順は正本に置き、README の「導入」の表から正本の項へ直接リンクする(手順書の先頭やカテゴリの見出しへはリンクしない)。執筆規則は setup-notes の `docs/dev/writing-rules.md`
-- `docs/reference/` は構成と理由、`docs/verification/` は検証記録(実施日・環境・結果・未確認事項)。ロールバックは正本の extra にある(このリポジトリには置かない)
+- `docs/reference/` は構成と理由。検証記録(実施日・環境・結果・未確認事項)は非公開の `ryo-aoki-pc/setup-notes-verification` の `repos/yazi/docs/verification/` に置く。ロールバックは正本の extra にある(このリポジトリには置かない)
 - setup-notes から張られている README の見出し(「依存コマンド」「上流の新しい版に追従する」)は、名前を変えない
 - 文書を移す・分ける・まとめるときは、移した経緯と、旧ファイル名・旧見出しとの対応を文書に書かない(経緯は git の履歴と Pull Request の本文に残す)。リンクを今の場所へ直す。中身が新しい場所への案内だけになったファイルは消す
+- 検証記録を書く・直すときは、`setup-notes-verification` を clone し、そちらへ Pull Request を作る
 - 検証していないことを「動く」と書かない。残す検証記録の実施日・対象版・環境・出力・成功と失敗・未実施の範囲・記録したときの手順番号は書き換えない。再検証せずに検証範囲を広げない。記録の手順番号が今の手順と違い、本文を読むのに要るときだけ「記録の手順 | 今の手順」の表で結ぶ。新しい検証は新しい節に足す
 
 ## 共同作業の規則

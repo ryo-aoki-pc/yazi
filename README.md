@@ -68,5 +68,5 @@ git push origin main && git push --force-with-lease origin custom && git push or
 ## 文書
 
 - [構成・上流との差分管理・独自キーバインド](docs/reference/readme.md)
-- [検証記録](docs/verification/readme.md)
+- [検証記録](https://github.com/ryo-aoki-pc/setup-notes-verification/blob/main/repos/yazi/docs/verification/readme.md)
 - 確かめ方と、変更するときの決まりは [AGENTS.md](AGENTS.md)
