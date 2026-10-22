@@ -38,7 +38,7 @@
 | --- | --- |
 | `l` / `<Enter>` | スマートエンター(ディレクトリは移動、ファイルは開く) |
 | `o` | 開く(ファイルを既定アプリで開く) |
-| `g/` | ルートへ移動(Linux / macOS は `/`、Windows は `C:\`) |
+| `g/` | ルートへ移動(Linux / macOS は `/`、Windows は `C:\`、Android の Termux は `$PREFIX`) |
 | `gT` | 一時ディレクトリへ移動(Linux / macOS は `/tmp`、Windows は `%TEMP%`、Android の Termux は `$TMPDIR`) |
 | `gt` | ゴミ箱を表示(Android の Termux は `~/.local/share/Trash/files` への移動に置き換える) |
 | `gh` / `gc` / `gd` | ホーム / `~/.config` / `~/Downloads` へ移動(`gd` は Android の Termux では `~/storage/downloads` を指定する) |
@@ -54,12 +54,13 @@
 
 `g/` と `gT` の行き先 `/`・`/tmp` は Unix のパスなので、`keymap.toml` ではこの 2 行に `for = "unix"` を付け、すぐ後に `for = "windows"` の行を置いています([keymap の Per-OS](https://yazi-rs.github.io/docs/configuration/keymap#per-os))。`for` が合わない行は読み込み時に除かれます。Windows で `/tmp` は無く、`cd /` の行き先も確かめていないため分けました。
 
-Android では `for = "android"` と `for = "unix"` の両方が当たり、同じキーは先にある行が使われるため、`gT`・`gt`・`gd` は Android の行を同じキーの既存の行より前に置いています。
+Android では、`for = "android"` の行のほかに、`for = "unix"` の行(`g/`・`gT`)と `for` の無い全 OS 共通の行(`gt`・`gd`)も当たります。同じキーは先にある行が使われるので、`g/`・`gT`・`gt`・`gd` は Android の行を同じキーの既存の行より前に置いています。
 
 - `g/` (Windows): `run = 'cd C:\'`。yazi は keymap の `run` の文字列をどの OS でも sh 風の分割器で区切り、引用符の外の `\` は次の 1 文字を残して消えます(`cd C:\dev` は `C:dev` になる。リンク先の上流の例 `'cd C:\dev'` もこれにあたる)。末尾の `\` だけはそのまま残るので、ドライブのルートはこの形で書けます。TOML のリテラル文字列(`'…'`)にして `\` を TOML のエスケープにしないようにしています。下の階層を足すときは `/` で区切るか、リテラル文字列の中で `\\` と重ねます(`'cd C:\\dev'`)
 - `gT` (Windows): `run = "cd %TEMP%"`。yazi は Windows では `cd` の行き先の `%VAR%` を環境変数で展開します(Unix では `$VAR` / `${VAR}`)
+- `g/` (Android の Termux): `run = "cd $PREFIX"`。Android の `/` はアプリから読めない(`Permission denied`)ため、Termux のパッケージの入る場所を指定します
 - `gT` (Android の Termux): `run = "cd $TMPDIR"`。`/tmp` は読めないため、Termux の一時ディレクトリを指定します
-- `gt` (Android の Termux): `run = "cd ~/.local/share/Trash/files"`。Android ではゴミ箱の一覧の VFS が使えないため、`d` でゴミ箱へ移したファイルの場所を指定します
+- `gt` (Android の Termux): `run = "cd ~/.local/share/Trash/files"`。Android ではゴミ箱の一覧の VFS が使えないため、`d` でゴミ箱へ移したファイルの場所を指定します。一度も `d` を使っていなければ、この場所はまだ無く、移れません
 - `gd` (Android の Termux): `run = "cd ~/storage/downloads"`。Termux には `~/Downloads` がふつう無く、`termux-setup-storage` の後は `~/storage/downloads` が Android の Download を指します
 - `gh` / `gc` は上流の既定の行のままで、`for` は無く全 OS 共通です。`cd` の行き先が `~` か `~/` で始まるとき、yazi はどの OS でもホーム(Windows では `C:\Users\<ユーザー名>`)に置き換えます。Windows での行き先は確かめていません
 
