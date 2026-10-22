@@ -4,8 +4,9 @@
 
 ## 導入
 
-- 対象: AlmaLinux 10 と Windows 11 の自分のユーザー。手順は setup-notes にあり、本体と依存コマンドを入れてから、この設定(`custom` ブランチ)を clone する
+- 対象: AlmaLinux 10・Windows 11・Android の Termux の自分のユーザー。手順は setup-notes にあり、本体と依存コマンドを入れてから、この設定(`custom` ブランチ)を clone する
 - 置き場所は `~/.config/yazi`(Windows は `%APPDATA%\yazi\config`)
+- Android の Termux の導入は、setup-notes の [Termux のシェル: yazi を入れる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/android.md#termux-のシェル-yazi-を入れる)
 
 | | AlmaLinux 10 | Windows 11 |
 | --- | --- | --- |
