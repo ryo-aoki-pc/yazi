@@ -6,11 +6,11 @@
 
 ## 導入手順の正本
 
-導入・更新・使い方の手順は、setup-notes の [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi) と [windows-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi) の「yazi」とその子の項にある。このリポジトリには置かない。上流の新しい版への追従(設定の更新)と、macOS の導入は README に置く。
+導入・更新・使い方の手順は、setup-notes の [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi) と [windows-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi) の「yazi」とその子の項と、[android.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/android.md#termux-のシェル-yazi-を入れる) の「Termux のシェル: yazi を入れる」にある。このリポジトリには置かない。上流の新しい版への追従(設定の更新)と、macOS の導入は README に置く。
 
 ## このリポジトリは何か
 
-[yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。導入の表と上流への追従は [README.md](README.md)、構成・ブランチ・独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [非公開側の readme.md](https://github.com/ryo-aoki-pc/setup-notes-verification/blob/main/repos/yazi/docs/verification/readme.md)。
+[yazi](https://github.com/sxyazi/yazi)（端末のファイルマネージャー）の自分用の設定。Linux / macOS と Android の Termux は `~/.config/yazi`、Windows は `%APPDATA%\yazi\config` に `custom` を clone して使う。導入の表と上流への追従は [README.md](README.md)、構成・ブランチ・独自のキーは [docs/reference/readme.md](docs/reference/readme.md)、検証記録は [非公開側の readme.md](https://github.com/ryo-aoki-pc/setup-notes-verification/blob/main/repos/yazi/docs/verification/readme.md)。
 
 ドキュメント・コミットメッセージ・Pull Request の説明は日本語で書く。
 
