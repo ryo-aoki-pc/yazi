@@ -4,9 +4,8 @@
 
 ## 導入
 
-- 対象: AlmaLinux 10・Windows 11・Android の Termux の自分のユーザー。手順は setup-notes にあり、本体と依存コマンドを入れてから、この設定(`custom` ブランチ)を clone する
+- 対象: AlmaLinux 10・Windows 11・Android の Termux の自分のユーザー。AlmaLinux 10 と Windows 11 の手順は setup-notes にあり、本体と依存コマンドを入れてから、この設定(`custom` ブランチ)を clone する
 - 置き場所は `~/.config/yazi`(Windows は `%APPDATA%\yazi\config`)
-- Android の Termux の導入は、setup-notes の [Termux のシェル: yazi を入れる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/android.md#termux-のシェル-yazi-を入れる)
 
 | | AlmaLinux 10 | Windows 11 |
 | --- | --- | --- |
@@ -16,7 +15,6 @@
 | 複数ファイルをまとめて開く(任意) | [yazi で複数ファイルをまとめて開く](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-で複数ファイルをまとめて開く) | [yazi で複数ファイルをまとめて開く](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-で複数ファイルをまとめて開く) |
 | この設定の更新 | [yazi の設定を更新する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-の設定を更新する) | [yazi の設定を更新する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-の設定を更新する) |
 | 本体の更新 | [共通の bash 設定・Homebrew・Flatpak を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#共通の-bash-設定homebrewflatpak-を上げる)の手順 2・3 | [scoop・winget・WSL を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#scoopwingetwsl-を上げる)の手順 2・3 |
-| 戻す | [端末とエディタを消す](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/extra/almalinux-setup.md#端末とエディタを消す)の手順 1 (この設定の clone の消し方は、その箇条書き) | [エディタとシェルのツールを消す](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/extra/windows-setup.md#エディタとシェルのツールを消す)の手順 1〜3 |
 
 yazi の版が上がったら、リポジトリの所有者が[上流の新しい版に追従する](#上流の新しい版に追従する)で、この設定を新しい既定設定の上に載せ替えます(`custom` を force push する)。ほかのマシンの clone は、[導入](#導入)の表の「この設定の更新」で合わせます。
 
