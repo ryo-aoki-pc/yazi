@@ -1,6 +1,6 @@
 # yazi 設定リファレンス
 
-[README(導入の表と、上流への追従)](../../README.md) / [検証記録](https://github.com/ryo-aoki-pc/setup-notes-verification/blob/main/repos/yazi/docs/verification/readme.md)
+[README(導入の表と、上流への追従)](../../README.md) / 検証記録
 
 ## 構成
 
@@ -64,4 +64,4 @@ Android では、`for = "android"` の行のほかに、`for = "unix"` の行(`g
 - `gd` (Android の Termux): `run = "cd ~/storage/downloads"`。Termux には `~/Downloads` がふつう無く、`termux-setup-storage` の後は `~/storage/downloads` が Android の Download を指します
 - `gh` / `gc` は上流の既定の行のままで、`for` は無く全 OS 共通です。`cd` の行き先が `~` か `~/` で始まるとき、yazi はどの OS でもホーム(Windows では `C:\Users\<ユーザー名>`)に置き換えます。Windows での行き先は確かめていません
 
-元は v26.9.1 のソースの `yazi-shared/src/shell/unix.rs`(分割器)、`yazi-shared/src/event/cmd.rs`(`run` の解析)、`yazi-fs/src/path/expand.rs`(変数の展開)、`yazi-fs/src/engine/local/absolute.rs`(`~` の置き換え)、`yazi-config/src/platform.rs`(`for` の値)です。Linux で確かめた範囲は[検証記録](https://github.com/ryo-aoki-pc/setup-notes-verification/blob/main/repos/yazi/docs/verification/readme.md)にあります。
+元は v26.9.1 のソースの `yazi-shared/src/shell/unix.rs`(分割器)、`yazi-shared/src/event/cmd.rs`(`run` の解析)、`yazi-fs/src/path/expand.rs`(変数の展開)、`yazi-fs/src/engine/local/absolute.rs`(`~` の置き換え)、`yazi-config/src/platform.rs`(`for` の値)です。Linux で確かめた範囲は検証記録にあります。
