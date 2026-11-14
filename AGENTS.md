@@ -4,7 +4,7 @@
 
 ## 導入手順の正本
 
-導入・更新・使い方の手順は、setup-notes の [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi) と [windows-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi) の「yazi」とその子の項にある。このリポジトリには置かない。上流の新しい版への追従(設定の更新)と、macOS の導入は README に置く。
+導入・更新・使い方の手順は、setup-notes の [almalinux-setup.md](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi) の「yazi」とその子の項にある。Windows 11 は、yazi と自分用の設定が入っていることを前提にし、[複数ファイルを開く使い方](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-で複数ファイルをまとめて開く)と[設定の更新](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-の設定を更新する)に手順がある。このリポジトリには置かない。上流の新しい版への追従(設定の更新)と、macOS の導入は README に置く。
 
 ## このリポジトリは何か
 
@@ -34,7 +34,7 @@ bash -n scripts/update-upstream.sh
 
 ## 文書の置き場所
 
-- 導入・利用・更新の手順は正本に置き、README の「導入」の表から正本の項へ直接リンクする(手順書の先頭やカテゴリの見出しへはリンクしない)。執筆規則は setup-notes の `docs/dev/writing-rules.md`
+- 導入・利用・更新の手順は正本に置き、README の「導入」の表から正本の項へ直接リンクする(手順書の先頭やカテゴリの見出しへはリンクしない)。導入の項が無い Windows 11 の設定は、導入済みの状態か公式の案内へのリンクで書く。執筆規則は setup-notes の `docs/dev/writing-rules.md`
 - `docs/reference/` は構成と理由。検証記録(実施日・環境・結果・未確認事項)は Forgejo の非公開リポジトリ `setup-notes-verification` の `repos/yazi/docs/verification/` に置く。ロールバック（取り消し）の手順は書かない
 - setup-notes から張られている README の見出し(「依存コマンド」「上流の新しい版に追従する」)は、名前を変えない
 - 文書を移す・分ける・まとめるときは、移した経緯と、旧ファイル名・旧見出しとの対応を文書に書かない(経緯は git の履歴と Pull Request の本文に残す)。リンクを今の場所へ直す。中身が新しい場所への案内だけになったファイルは消す

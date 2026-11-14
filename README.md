@@ -4,14 +4,14 @@
 
 ## 導入
 
-- 対象: AlmaLinux 10・Windows 11・Android の Termux の自分のユーザー。AlmaLinux 10 と Windows 11 の手順は setup-notes にあり、本体と依存コマンドを入れてから、この設定(`custom` ブランチ)を clone する
+- 対象: AlmaLinux 10・Windows 11・Android の Termux の自分のユーザー。AlmaLinux 10 の手順は setup-notes にある。Windows 11 は、本体・依存コマンドと自分用の設定(`custom` ブランチ)が入っていることを前提にする
 - 置き場所は `~/.config/yazi`(Windows は `%APPDATA%\yazi\config`)
 
 | | AlmaLinux 10 | Windows 11 |
 | --- | --- | --- |
 | 前提(導入元と端末) | [共通の bash 設定](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/shell-terminal.md#共通の-bash-設定)・[Homebrew](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#homebrew)・[WezTerm](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/shell-terminal.md#wezterm) | [scoop](https://scoop.sh/)・[WezTerm](https://wezterm.org/install/windows.html) の Git Bash と共通の bash 設定が使えること（Visual C++ ランタイムの x64 版は[公式の案内](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)に従って入れてあること） |
-| 本体・依存コマンドとこの設定 | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi)(手順 3 で「yazi の設定を導入する」も通す) | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi)(`YAZI_FILE_ONE` もここで設定する。手順 6 で「yazi の設定を導入する」も通す) |
-| この設定だけ(本体が入っているとき) | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-の設定を導入する) | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-の設定を導入する) |
+| 本体・依存コマンドとこの設定 | [yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi)(手順 3 で「yazi の設定を導入する」も通す) | [yazi の公式の導入案内](https://yazi-rs.github.io/docs/installation/)。自分用の設定が入っていること |
+| この設定だけ(本体が入っているとき) | [yazi の設定を導入する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-の設定を導入する) | `%APPDATA%\yazi\config` にこの設定の `custom` ブランチの clone があること |
 | 複数ファイルをまとめて開く(任意) | [yazi で複数ファイルをまとめて開く](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-で複数ファイルをまとめて開く) | [yazi で複数ファイルをまとめて開く](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-で複数ファイルをまとめて開く) |
 | この設定の更新 | [yazi の設定を更新する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#yazi-の設定を更新する) | [yazi の設定を更新する](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi-の設定を更新する) |
 | 本体の更新 | [共通の bash 設定・Homebrew・Flatpak を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/almalinux-setup.md#共通の-bash-設定homebrewflatpak-を上げる)の手順 2・3 | [scoop・winget・WSL を上げる](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#scoopwingetwsl-を上げる)の手順 2・3 |
@@ -36,7 +36,7 @@ git clone -b custom https://github.com/ryo-aoki-pc/yazi.git ~/.config/yazi
 | [`fzf`](https://github.com/junegunn/fzf) | ファイル/ディレクトリ絞り込み | `z` |
 | [`zoxide`](https://github.com/ajeetdsouza/zoxide) | ディレクトリへジャンプ | `Z` |
 
-yazi はファイルの種類の判定に `file` を使います。Windows では Git for Windows の `file.exe` を使うように設定します(setup-notes の Windows 11 の[yazi](https://github.com/ryo-aoki-pc/setup-notes/blob/main/docs/windows-setup.md#yazi)で設定する `YAZI_FILE_ONE`)。また Windows では、`O`(対話的に開く)の候補に [`neovide`](https://neovide.dev/) も出ます(`yazi.toml` の `edit` の opener)。候補はコマンドの有無で絞られないので、選んで使うときは neovide を入れておきます。
+yazi はファイルの種類の判定に `file` を使います。Windows では Git for Windows の `file.exe` を使うように設定します([yazi の公式の Windows の案内](https://yazi-rs.github.io/docs/installation/#windows)の `YAZI_FILE_ONE`)。また Windows では、`O`(対話的に開く)の候補に [`neovide`](https://neovide.dev/) も出ます(`yazi.toml` の `edit` の opener)。候補はコマンドの有無で絞られないので、選んで使うときは neovide を入れておきます。
 
 ## 上流との差分を確認する
 
